@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/nav";
+import RegisterGsapPlugins from "@/components/RegisterGsapPlugins";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -27,9 +28,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={inter.variable}>
-      <body className="bg-green-50 relative">
-        <div className="px-[5%] py-10 fixed w-full z-50">
-          <NavBar />
+      <RegisterGsapPlugins />
+      <body className="bg-green-50 relative overflow-x-hidden">
+        <div className="fixed w-full z-50">
+          <div className="px-[5%] pt-10 pb-2 bg-primary/10 shadow-2xl backdrop-blur-xl rounded-b-2xl">
+            <NavBar />
+          </div>
         </div>
         {children}
       </body>
