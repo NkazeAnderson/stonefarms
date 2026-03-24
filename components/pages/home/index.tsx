@@ -44,7 +44,7 @@ export default function HomePage() {
       <Services services={services} />
       <ImpactSummary />
       <Testimonials />
-      <Footer />
+     
     </div>
   );
 }

@@ -26,11 +26,11 @@ function Footer() {
           </div>
         </div>
         <div>
-          <ul>
-            <li>Link 1</li>
-            <li>Link 1</li>
-            <li>Link 1</li>
-            <li>Link 1</li>
+          <ul className=" font-medium">
+            <li>Blogs</li>
+            <li>Contact-us</li>
+            <li>Donate</li>
+            <li>Privacy policy</li>
           </ul>
         </div>
         <div className=" space-y-4">

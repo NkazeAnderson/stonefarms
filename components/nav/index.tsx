@@ -24,7 +24,7 @@ function NavBar() {
       <ul className=" flex gap-8 text-lg font-medium">
         {naveLinks.map((item) => {
           return (
-            <Link href={"/"} key={item.text}>
+            <Link href={item.link} key={item.text}>
               <li className="hover:text-green-700 group block text-green-50">
                 <NavLinkClient link={item.link}>
                   <div className=" leading-4 capitalize">

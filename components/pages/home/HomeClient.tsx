@@ -89,7 +89,10 @@ export function Services({ services }: { services: Service[] }) {
   const [progress, setProgress] = useState(0);
   const getHighlightedIndex = (progress: number) =>
     Math.floor(progress * services.length);
-  const highlightedIndex = getHighlightedIndex(progress);
+  let highlightedIndex = getHighlightedIndex(progress);
+  if (highlightedIndex > services.length - 1) {
+    highlightedIndex = services.length - 1;
+  }
   useGSAP(() => {
     gsap.to(`#services`, {
       display: "fixed",
