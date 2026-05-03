@@ -1,9 +1,10 @@
-import "leaflet/dist/leaflet.css";
-import MyMap from "./Map";
+import dynamic from "next/dynamic";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Facebook, Youtube } from "lucide-react";
+
+const MyMap = dynamic(() => import("./Map"), { ssr: false });
 
 function ContactUsPage() {
   return (

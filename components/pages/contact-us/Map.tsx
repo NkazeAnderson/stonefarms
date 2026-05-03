@@ -1,46 +1,52 @@
 "use client";
-import React, { useRef } from "react";
-import { MapContainer, TileLayer, Marker, Popup, Tooltip } from "react-leaflet";
+
+import { MapContainer, TileLayer, Marker, Tooltip } from "react-leaflet";
 import L from "leaflet";
-import type { Tooltip as TP } from "leaflet";
+import "leaflet/dist/leaflet.css";
 
-// Fix for default marker icons not showing up in React builds
+const iconUrl = new URL("leaflet/dist/images/marker-icon.png", import.meta.url)
+  .href;
+const iconRetinaUrl = new URL(
+  "leaflet/dist/images/marker-icon-2x.png",
+  import.meta.url,
+).href;
+const shadowUrl = new URL(
+  "leaflet/dist/images/marker-shadow.png",
+  import.meta.url,
+).href;
 
-let DefaultIcon = L.icon({
-  iconUrl: require("leaflet/dist/images/marker-icon.png"),
-  shadowUrl: require("leaflet/dist/images/marker-shadow.png"),
+const defaultIcon = L.icon({
+  iconUrl,
+  iconRetinaUrl,
+  shadowUrl,
   iconSize: [25, 41],
   iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  tooltipAnchor: [16, -28],
 });
-L.Marker.prototype.options.icon = DefaultIcon;
+
+L.Marker.prototype.options.icon = defaultIcon;
 
 const MyMap = () => {
-  const position = [5.447019761751152, 10.076910444180669]; // [Latitude, Longitude]
-  const tooltip = useRef<TP | null>(null);
+  const position: [number, number] = [5.447019761751152, 10.076910444180669];
+
   return (
-    <div
-      style={{
-        height: "400px",
-        width: "100%",
-        zIndex: 0,
-        position: "relative",
-      }}
-    >
+    <div className="relative h-[400px] w-full">
       <MapContainer
-        center={{ lat: position[0], lng: position[1] }}
+        center={position}
         zoom={15}
-        style={{ height: "100%", width: "100%" }}
+        scrollWheelZoom={false}
+        className="h-full w-full"
       >
-        {/* The TileLayer provides the actual map imagery (OpenStreetMap) */}
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
 
-        {/* The Marker and its Callout (Popup) */}
-        <Marker position={{ lat: position[0], lng: position[1] }}>
-          <Tooltip ref={tooltip} permanent sticky>
-            <strong>StONEFARMS</strong> <br />
+        <Marker position={position}>
+          <Tooltip permanent sticky>
+            <strong>StONEFARMS</strong>
+            <br />
             Sustainable agriculture engineering.
           </Tooltip>
         </Marker>
