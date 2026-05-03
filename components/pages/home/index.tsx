@@ -26,6 +26,7 @@ import OrganisationsList from "./OrganisationsList";
 import AboutUs from "./AboutUs";
 import SDGSection from "./SDGSection";
 import WhyInvest from "./WhyInvest";
+import BlogSection from "./BlogSection";
 import { services } from "@/constants";
 import ImpactSummary from "./ImpactSummary";
 import Testimonials from "./Testimonials";
@@ -40,11 +41,11 @@ export default function HomePage() {
       <OrganisationsList />
       <AboutUs />
       <SDGSection />
+      <BlogSection />
       <WhyInvest />
       <Services services={services} />
       <ImpactSummary />
       <Testimonials />
-     
     </div>
   );
 }

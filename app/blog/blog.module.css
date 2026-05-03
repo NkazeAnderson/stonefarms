@@ -1,0 +1,86 @@
+.blogPage {
+  scroll-margin-top: 6rem;
+}
+
+.blogLead {
+  margin-bottom: 3rem;
+}
+
+.blogLink {
+  color: #0c6b33;
+  text-decoration: underline;
+}
+
+.blogLink:visited {
+  color: #07461f;
+}
+
+.blogPostBody {
+  line-height: 1.9;
+  color: #1f2937;
+}
+
+.blogPostBody p {
+  margin: 1rem 0;
+}
+
+.blogPostBody h1,
+.blogPostBody h2,
+.blogPostBody h3,
+.blogPostBody h4,
+.blogPostBody h5,
+.blogPostBody h6 {
+  margin: 2rem 0 1rem;
+  line-height: 1.2;
+}
+
+.blogPostBody ul,
+.blogPostBody ol {
+  margin: 1rem 0 1.5rem 1.4rem;
+  padding-left: 1rem;
+}
+
+.blogPostBody li {
+  margin-bottom: 0.75rem;
+}
+
+.blogPostBody a {
+  color: #0c6b33;
+  text-decoration: underline;
+}
+
+.blogPostBody a:visited {
+  color: #07461f;
+}
+
+.blogPostBody img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 1.75rem 0;
+  border-radius: 1rem;
+}
+
+.blogPostBody blockquote {
+  margin: 2rem 0;
+  padding: 1rem 1.25rem;
+  border-left: 4px solid #0c6b33;
+  background: #f5fcf4;
+  color: #1b3a1e;
+}
+
+.blogPostBody table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.75rem 0;
+}
+
+.blogPostBody th,
+.blogPostBody td {
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  padding: 0.75rem 1rem;
+}
+
+.blogPostBody th {
+  background: rgba(12, 107, 51, 0.08);
+}

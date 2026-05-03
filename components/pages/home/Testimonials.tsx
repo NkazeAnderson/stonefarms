@@ -7,8 +7,8 @@ function Testimonials() {
     <section className="z-10 px-20 py-10 ">
       <h4 className="text-primary pt-10 pb-4 ">Testimonials</h4>
       <div className="flex gap-6">
-        {testimonials.map((item) => (
-          <Testimonial testimonial={item} />
+        {testimonials.map((item, i) => (
+          <Testimonial key={"Testiminial-" + i} testimonial={item} />
         ))}
       </div>
     </section>

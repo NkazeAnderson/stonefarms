@@ -4,6 +4,7 @@ import { Tractor } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 import HeaderLeftGridCol from "./HomeClient";
+import Link from "next/link";
 
 function Header() {
   return (
@@ -28,10 +29,12 @@ function Header() {
               engineers applying sustainable techniques to farm ready to market
               crops while maintaining the ecosystem
             </p>
-            <Button className=" mt-7 bg-green-100 text-green-950">
-              Our Projects
-              <Tractor />
-            </Button>
+            <Link href={"/blog?category=projects"}>
+              <Button className=" mt-7 bg-green-100 text-green-950">
+                Our Projects
+                <Tractor />
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

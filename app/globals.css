@@ -181,4 +181,7 @@
   button {
     @apply hover:scale-105 hover:cursor-pointer transition-all duration-300 ease-in-out;
   }
+  ul {
+    @apply list-disc list-inside pl-2;
+  }
 }
