@@ -79,7 +79,7 @@ function AboutUs() {
                 to eliminate waste and maximize economic stability.
               </p>
 
-              <p className="py-4">Read more...</p>
+              <p className="py-4 font-bold text-gray-600 ">Read more...</p>
             </TabsContent>
             <TabsContent value="vision">
               <p>
@@ -90,7 +90,7 @@ function AboutUs() {
                 change.
               </p>
 
-              <p className="py-4">Read more...</p>
+              <p className="py-4 font-bold text-gray-600">Read more...</p>
             </TabsContent>
             <TabsList className=" gap-2">
               {tabs.map((item) => (
@@ -108,7 +108,7 @@ function AboutUs() {
         <div className="aspect-video relative px-4 md:px-20">
           <video
             ref={videoRef}
-            src="/intro-video.mp4"
+            src="https://blogs.stonefarms.org/intro-video.mp4"
             className="h-full w-full object-fill"
             loop
             muted
