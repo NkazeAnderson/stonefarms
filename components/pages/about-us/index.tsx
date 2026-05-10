@@ -11,33 +11,39 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import React from "react";
+import ProjectsSection from "./ProjectsSection";
+import { team } from "@/constants";
+import TeamSection from "./TeamSection";
 
 function AboutUsPage() {
+
   return (
     <>
-      <div className=" w-full h-[75vh] pt-20">
-        <div className="bg-[url(/img-1.jpg)] bg-cover bg-no-repeat bg-center flex justify-center items-center h-full bg-fixed">
-          <h1 className=" text-white text [-webkit-text-stroke:2px_green] ">
+      <div className=" w-full h-[50vh] pt-20">
+       
+        <div className="bg-[url(/IMG-20240810-WA0112.jpg)] bg-cover bg-no-repeat bg-center relative flex justify-center items-center h-full bg-fixed">
+        <div className="absolute inset-0 bg-primary-500/50 border"></div>
+          <h1 className=" text-white text [-webkit-text-stroke:2px_green] z-10">
             About us
           </h1>
         </div>
       </div>
-      <section className=" px-20 py-10">
-        <div className=" flex gap-2 items-center justify-center">
+      <section className=" px-4 md:px-10 lg:px-20 py-10">
+        <div className=" flex flex-col lg:flex-row gap-2 items-center justify-center">
           <h2 className=" text-primary">STONEFARMS:</h2>
-          <h2 className=" text-primary-700 text-xl uppercase underline">
+          <h2 className=" text-primary-700 text-xl uppercase underline text-center lg:text-left">
             Sustainable Organisation Of Transformers Farmers Network
           </h2>
         </div>
       </section>
-      <section className="px-20 py-10">
-        <div className="flex gap-4">
-          <div>
-            <div className="w-[20vw] aspect-square relative">
-              <Image src={"/img-1.jpg"} alt="Stonefarms group" fill />
+      <section className=" px-4 md:px-10 lg:px-20 pb-10">
+        <div className="flex flex-col md:flex-row gap-4">
+          <div className="flex-1">
+            <div className=" aspect-square lg:aspect-square relative">
+              <Image src={"/img-1.jpg"} alt="Stonefarms group" fill  className="rounded-md shadow-lg"/>
             </div>
           </div>
-          <div>
+          <div className="flex-4">
             <p>
               We are perfecting agriculture in Cameroon 🇨🇲 by embracing
               ecological, economical, and sustainable approaches to food
@@ -50,7 +56,7 @@ function AboutUsPage() {
               cultivate not just crops, but a thriving ecosystem where people
               and nature coexist in harmony
             </p>
-            <div className="grid grid-cols-2">
+            <div className="grid grid-cols-1 md:grid-cols-2">
               <div className=" p-4 border-r-2 border-primary-200 rounded-sm">
                 <h3>Mission</h3>
                 <p>
@@ -87,13 +93,13 @@ function AboutUsPage() {
           </div>
         </div>
       </section>
-      <section className=" px-20 py-4">
+      <section className=" px-4 md:px-20 py-4">
         <h4 className=" text-primary">Core Values</h4>
         <div className="flex">
           <div className="flex-1 flex items-center justify-center">
             <CoreValuesSVG />
           </div>
-          <div className="flex-2">
+          <div className=" flex-4 lg:flex-2">
             <p className=" font-medium text-lg pb-2">
               At <span className=" text-primary font-semibold">STONEFARMS</span>
               , we are committed to:
@@ -142,95 +148,12 @@ function AboutUsPage() {
           </div>
         </div>
       </section>
-      <section className=" ">
-        <div className=" flex flex-col items-center py-12">
-          <div className=" relative">
-            <div className=" absolute -top-6 left-0 py-1 px-2 rounded-full bg-primary-300">
-              <p className="font-semibold text-sm italic leading-none">
-                Team <CheckCircle className=" inline text-accent " size={12} />
-              </p>
-            </div>
-            <h2 className=" text-primary-500"> Who Do We have On Board?</h2>
-          </div>
-        </div>
-        <div className=" px-20 py-10 bg-primary-100 grid grid-cols-3 gap-16">
-          {Array(3)
-            .fill(0)
-            .map((item) => (
-              <TeamMemberCard />
-            ))}
-        </div>
-        <div className="flex items-center justify-center py-4 bg-primary-100">
-          <Button className=" bg-gray-600 text-gray-900">
-            View More Members
-          </Button>
-        </div>
-      </section>
-      <section className=" py-10">
-        <h2 className=" px-20 py-10">Some Recent Projects</h2>
-        <div className="flex gap-6 px-4 flex-nowrap overflow-x-auto">
-          <div className=" flex flex-col justify-between">
-            <div className="w-[47vw] relative aspect-video">
-              <Image
-                src={"/feasibility.jpg"}
-                alt="Project Image"
-                fill
-                className="rounded-sm"
-              />
-            </div>
-            <div className=" flex justify-between items-center py-2">
-              <h5 className=" font-bold">Cassava Project Bandjoun</h5>
-              <ArrowRight />
-            </div>
-          </div>
-          <div className=" flex flex-col justify-between">
-            <div className="w-[40vw] relative aspect-video">
-              <Image
-                src={"/feasibility.jpg"}
-                alt="Project Image"
-                fill
-                className="rounded-sm"
-              />
-            </div>
-            <div className=" flex justify-between items-center py-2">
-              <h5 className=" font-bold">Cassava Project Bandjoun</h5>
-              <ArrowRight />
-            </div>
-          </div>
-          <div>
-            <div className="w-[45vw] relative aspect-video">
-              <Image
-                src={"/feasibility.jpg"}
-                alt="Project Image"
-                fill
-                className="rounded-sm"
-              />
-            </div>
-            <div className=" flex justify-between items-center py-2">
-              <h5 className=" font-bold">Cassava Project Bandjoun</h5>
-              <ArrowRight />
-            </div>
-          </div>
-          <div>
-            <div className="w-[45vw] relative aspect-video">
-              <Image
-                src={"/feasibility.jpg"}
-                alt="Project Image"
-                fill
-                className="rounded-sm"
-              />
-            </div>
-            <div className=" flex justify-between items-center py-2">
-              <h5 className=" font-bold">Cassava Project Bandjoun</h5>
-              <ArrowRight />
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className=" px-20 py-10 space-y-4">
+    <TeamSection />
+ <ProjectsSection />
+      <section className=" px-4 md:px-20 py-10 space-y-4">
         <h2 className=" text-primary">Daily activities</h2>
-        <ul className=" list-disk  ml-4">
-          <li>Provide aid to farmers to boast their productivity.</li>
+        <ul className=" list-disc  ml-4">
+          <li>Provide aid to farmers to boost their productivity.</li>
           <li>Participate and engage in community development.</li>
           <li>
             Service provision for sustainable agriculture and rural development.

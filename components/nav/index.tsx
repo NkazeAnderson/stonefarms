@@ -1,19 +1,21 @@
 import React from "react";
 import Logo from "./Logo";
 import { Button } from "../ui/button";
-import { Nfc } from "lucide-react";
+import { Menu, Nfc } from "lucide-react";
 import Link from "next/link";
 import { Url } from "next/dist/shared/lib/router/router";
-import NavLinkClient from "./NavLinkClient";
+import NavLinkClient, { MobileNav } from "./NavLinkClient";
+import DonateButton from "./DonateButton";
 
 export type NavLink = {
   text: string;
   link: Url;
 };
 
-const naveLinks: NavLink[] = [
+export const naveLinks: NavLink[] = [
   { text: "home", link: "/" },
   { text: "about us", link: "/about-us" },
+  { text: "blogs", link: "/blog" },
   { text: "contact us", link: "/contact-us" },
 ];
 
@@ -21,7 +23,7 @@ function NavBar() {
   return (
     <nav className=" flex justify-between items-center  p-2 border-accent bg-green-950 border rounded-4xl">
       <Logo />
-      <ul className=" flex gap-8 text-lg font-medium">
+      <ul className=" lg:flex lg:gap-8 gap-4 text-lg font-medium hidden">
         {naveLinks.map((item) => {
           return (
             <Link href={item.link} key={item.text}>
@@ -41,13 +43,12 @@ function NavBar() {
           );
         })}
       </ul>
-      <Button
-        className="bg-accent text-white rounded-4xl hover:cursor-pointer hover:scale-105 ease-in-out"
-        size={"lg"}
-      >
-        Donate
-        <Nfc />
-      </Button>
+      <div className=" hidden lg:block">
+
+      <DonateButton/>
+      </div>
+    <MobileNav />
+ 
     </nav>
   );
 }

@@ -6,7 +6,7 @@ import React, { useState } from "react";
 function SDGSection() {
   const [visibleIndices, setVisibleIndices] = useState([0, 1, 2]);
   return (
-    <section className="z-10 px-20 bg-primary-50 my-4">
+    <section className="z-10 px-4 md:px-20 bg-primary-50 my-4">
       <div className="flex pt-16 pb-10 items-center justify-between">
         <h4 className=" text-primary ">
           Alignment With United Nations Sustainable Development Goals

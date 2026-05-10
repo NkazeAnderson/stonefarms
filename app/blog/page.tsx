@@ -34,8 +34,8 @@ export default async function BlogsPage({
               Projects from STONEFARMS
             </h1>
             <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-slate-600 sm:text-lg">
-              Discover what type of projects STONEFARMS is involved in. We are
-              all about transperency, perfection and eco-friendly practices.
+              Discover our initiatives and projects. We are committed to
+              transparency, excellence, and eco-friendly practices.
             </p>
           </div>
         ) : (

@@ -29,8 +29,8 @@ export default async function BlogSection() {
           Latest news from STONEFARMS
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
-          Read the latest stories and updates on our projects, farming
-          techniques and green planet endeavors.
+          Stay informed with the latest developments in sustainable agriculture,
+          innovative farming techniques, and our environmental initiatives.
         </p>
       </div>
 

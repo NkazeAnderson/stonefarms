@@ -9,35 +9,41 @@ import Link from "next/link";
 function Header() {
   return (
     <div
-      className="h-[95vh] relative bg-no-repeat bg-fixed bg-cover "
+      className="md:h-[60vh] lg:h-[95vh] relative bg-no-repeat bg-fixed bg-cover grid grid-cols-1 md:grid-cols-2 items-center z-10"
       style={{
         backgroundImage: "url('/earth-cross-section.png')",
       }}
     >
-      <div className="h-full w-full grid grid-cols-2 items-center z-0 ">
-        <div className="relative h-full ">
+
+        <div className="md:hidden absolute inset-0 z-40 pointer-events-none">
           <HeaderLeftGridCol />
         </div>
-        <div className=" p-16 ">
-          <div className="a  rounded-2xl bg-green-950/80 p-4 text-green-50 space-y-2">
+
+        <div className="relative h-full hidden md:block z-40">
+          <HeaderLeftGridCol />
+        </div>
+
+        <div className="p-8 lg:p-16 relative z-50">
+          <div className="hero-text-box rounded-2xl bg-green-950/80 p-8 md:p-10 text-green-50 space-y-6">
             <Badge className="bg-green-950 font-semibold uppercase">
               StoneFarms
             </Badge>
-            <h2>The Productive Agricultural hub</h2>
+            <h2>Advancing Sustainable Agriculture in Cameroon</h2>
             <p>
-              We are Cameroon's most skilled organisation of agricultural
-              engineers applying sustainable techniques to farm ready to market
-              crops while maintaining the ecosystem
+              StoneFarms is dedicated to promoting sustainable agricultural
+              practices that enhance food security, protect the environment, and
+              support local communities through innovative engineering and
+              ecological stewardship.
             </p>
             <Link href={"/blog?category=projects"}>
               <Button className=" mt-7 bg-green-100 text-green-950">
-                Our Projects
+                Our Initiatives
                 <Tractor />
               </Button>
             </Link>
           </div>
         </div>
-      </div>
+      
     </div>
   );
 }

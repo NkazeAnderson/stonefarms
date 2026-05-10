@@ -4,7 +4,7 @@ import React from "react";
 
 function Testimonial({ testimonial }: { testimonial: Testimonial }) {
   return (
-    <div className="flex">
+    <div className="flex p-4 rounded-lg hover:bg-gray-50 transition-colors duration-200">
       <div>
         <div className=" relative w-10 aspect-square ">
           <Image
@@ -15,7 +15,7 @@ function Testimonial({ testimonial }: { testimonial: Testimonial }) {
           />
         </div>
       </div>
-      <div className="ml-4 max-w-[25vw]">
+      <div className="ml-4 max-w-full md:max-w-[25vw]">
         {Array(5)
           .fill(0)
           .map((_, i) => (

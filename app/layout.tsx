@@ -5,6 +5,7 @@ import "leaflet/dist/leaflet.css";
 import NavBar from "@/components/nav";
 import RegisterGsapPlugins from "@/components/RegisterGsapPlugins";
 import Footer from "@/components/footer";
+import AppContextProvider from "@/components/context/AppContext";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -109,13 +110,17 @@ export default function RootLayout({
       </head>
       <RegisterGsapPlugins />
       <body className="bg-green-50 relative overflow-x-hidden">
+        <AppContextProvider>
+
         <div className="fixed w-full z-50">
-          <div className="px-[5%] pt-10 pb-2 bg-primary/10 shadow-2xl backdrop-blur-xl rounded-b-2xl">
+          <div className=" px-[1%] md:px-[5%] pt-2 md:pt-4 lg:pt-10 pb-2 bg-primary/10 shadow-2xl backdrop-blur-xl rounded-b-2xl">
             <NavBar />
           </div>
         </div>
+             
         {children}
         <Footer />
+        </AppContextProvider>
       </body>
     </html>
   );

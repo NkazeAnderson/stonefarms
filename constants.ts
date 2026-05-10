@@ -1,3 +1,5 @@
+import { TeamMemberT } from "./components/TeamMemberCard";
+
 export const services: Service[] = [
   {
     title: "Agricultural Consultancy",
@@ -203,31 +205,31 @@ export const whyWorkWithUs: {
   backgroundColor: string;
 }[] = [
   {
-    heading: "Assured Return on Investment",
+    heading: "Sustainable Impact",
     description:
-      "We transform capital into consistent growth. By combining high-yield agricultural practices with rigorous financial forecasting, we ensure every investment is backed by stable, measurable results.",
+      "Partner with us to drive meaningful change. Our initiatives focus on long-term environmental benefits and community development, creating lasting positive outcomes for food security and biodiversity.",
     image: "/rio.jpg",
     backgroundColor: "#F8ABCF",
   },
 
   {
-    heading: "Large-Scale Project Capacity",
+    heading: "Scalable Solutions",
     description:
-      "From expansive acreages to complex global supply chains, we possess the infrastructure and machinery to scale operations without ever compromising on quality or environmental standards.",
+      "From local farms to regional programs, we have the expertise and infrastructure to implement sustainable agricultural solutions at any scale, ensuring quality and environmental standards are maintained.",
     image: "/lg-scale-pg.jpg",
     backgroundColor: "#ABD7F8",
   },
   {
-    heading: "Professional Project Management",
+    heading: "Transparent Operations",
     description:
-      "Transparency is our baseline. Using our proprietary internal software, we provide real-time oversight and precision resource allocation to streamline every phase of the farm’s lifecycle.",
+      "We prioritize accountability and openness. Through our advanced monitoring systems, we provide real-time insights and precise resource management for all our collaborative projects.",
     image: "/pg-management-tools.jpg",
     backgroundColor: "#F8C4AB",
   },
   {
-    heading: "Certified Agricultural Engineers",
+    heading: "Expert Engineering",
     description:
-      "Innovation meets expertise. Our team of licensed engineers applies advanced soil science and modern irrigation technology to maximize the long-term health and output of your land.",
+      "Innovation through expertise. Our certified engineers integrate advanced soil science and irrigation technology to optimize land health and productivity sustainably.",
     image: "/certified-eng.jpg",
     backgroundColor: "#ABF8EB",
   },
@@ -235,21 +237,78 @@ export const whyWorkWithUs: {
 
 export const testimonials: Testimonial[] = [
   {
-    text: "This company has exceeded our expectations in every way. Their attention to detail and commitment to excellence is unmatched.",
-    rating: 4,
-    name: "John Doe",
-    job: "Rural development Engineer",
-  },
-  {
-    text: "This company has exceeded our expectations in every way. Their attention to detail and commitment to excellence is unmatched.",
-    rating: 3,
-    name: "John Doe",
-    job: "Rural development Engineer",
-  },
-  {
-    text: "This company has exceeded our expectations in every way. Their attention to detail and commitment to excellence is unmatched.",
+    profilePic: "/drazz.jpeg",
+    text: "STONEFARMS has been one of the most innovative and pace-setting outfits in the Agro space. Their commitment to, sustainability, excellence and organic practices are worthy of emulation. I highly recommend them.",
     rating: 5,
-    name: "John Doe",
-    job: "Rural development Engineer",
+    name: "Drazz Francios",
+    job: "Community Farmer Leader",
+  },
+  {
+    profilePic: "/fotang_chefor.jpeg",
+    text: "StoneFarms is advancing climate-smart agriculture (CSA) in Dschang, Cameroon, by partnering with universities to enhance sustainable farming. Through hands-on training at the University of Dschang and Foyamghem Institute, students learn eco-friendly agricultural practices while developing fruit tree plots and nutritional gardens.",
+    rating: 5,
+    name: "Dr. Fotang Chefor",
+    job: "Professor",
+  },
+  {
+    profilePic: "/fomujong_derrick.jpeg",
+    text: "Since its Inception, STONEFARMS has always pride itself on Socioeconomic and Environmental Sustainability. This is evident in the impact they’ve had on the communities touched. They have my highest recommendation without reservation. Think Sustainability, think STONEFARMS.",
+    rating: 5,
+    name: "Fomujong Derrick",
+    job: "PhD Researcher",
+  },
+];
+
+
+export const team: TeamMemberT[] = [
+  {
+    name: "Egr. Nkemofa Godwill F.",
+    title: "Director / Agronomist and Climate Advocate",
+    profilePic: "/team/Nkemofa_Godwill.png",
+  },
+  {
+    name: "Egr. Ali Nfoh H. T.",
+    title: "Communication Manager / Agricultural Engineer",
+    profilePic: "/team/Ali_Nfoh_Hensel.png",
+  },
+  {
+    name: "Dr. Ndifon Dimanche Kengah",
+    title: "Integrated Rural Development Expert",
+    profilePic: "/team/Ndifon_Dimanche.png",
+  },
+  {
+    name: "Egr. MENGETOH JANIVER P.",
+    title: "Project Manager / Agricultural Engineer",
+    profilePic: "/team/Mengetoh_Promise_Jeniver.png",
+  },
+  {
+    name: "Egr. Bongkiyoung Manet",
+    title: "Program manager / Agricultural Engineer",
+    profilePic: "/team/Bongkiyoung_Manet.png",
+  },
+  {
+    name: "Engr. Ngoeko Tefonou Bernadette Sorele",
+    title: "Development Expert Agricultural engineer",
+    profilePic: "/team/Ngoeko_Tefonou.png",
+  },
+  {
+    name: "Dr. KAJOH Julius BOYAH",
+    title: "Development Expert Plant physiologist/Biotechnologist",
+    profilePic: "/team/KAJOH_Julius.jpg",
+  },
+  {
+    name: "Madame Kanjoh Peninnah Mbuli",
+    title: "Secretary. Nutritionist",
+    profilePic: "/team/Kanjoh_Peninnah.png",
+  },
+  {
+    name: "Mr Wirkom Bertus",
+    title: "Vice Secretary. Climate Expert",
+    profilePic: "/team/Wirkom_Bertus.png",
+  },
+  {
+    name: "Ndi Shey Reuben",
+    title: "Media and Graphic Designer",
+    profilePic: "/team/Shey_Reuben.jpg",
   },
 ];

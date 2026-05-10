@@ -11,8 +11,8 @@ function CoreValuesSVG() {
   }, []);
   return (
     <svg
-      height="250px"
-      width="250px"
+      height={"100%"}
+      width={"100%"}
       version="1.1"
       id="_x32_"
       xmlns="http://www.w3.org/2000/svg"

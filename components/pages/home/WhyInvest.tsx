@@ -7,26 +7,24 @@ import { Tractor } from "lucide-react";
 function WhyInvest() {
   return (
     <section className="z-10 px-4 md:px-20 py-10">
-      <h2 className="text-primary pt-10 pb-4 sticky top-[80px]">
-        Why invest with us?
+      <h2 className="text-primary pt-6 lg:pt-10 pb-4 sticky top-[40px] lg:top-[80px]">
+        Why Partner with Us?
       </h2>
       <div className="relative flex flex-col gap-6 min-h-[80vh]">
         {whyWorkWithUs.map((item, i) => (
           <div
             key={`whyworkwithus-${i}`}
             id={`whyUsCard-${i}`}
-            className={`sticky  rounded-2xl  px-6 py-8 shadow-lg  flex flex-col md:flex-row gap-6 ${
+            className={`sticky  rounded-2xl  px-6 py-4 lg:py-6 shadow-lg  flex flex-col md:flex-row gap-4 lg:gap-6  ${
               i == 0
-                ? "bg-primary-50"
+                ? "bg-primary-50 top-30 md:top-40"
                 : i == 1
-                  ? "bg-primary-100"
+                  ? "bg-primary-100 top-42 md:top-52"
                   : i == 2
-                    ? "bg-primary-200"
-                    : "bg-primary-300"
+                    ? "bg-primary-200 top-56 md:top-64"
+                    : "bg-primary-300 top-68 md:top-80"
             }`}
-            style={{
-              top: 180 + i * 80,
-            }}
+            
           >
             <div className="flex-2">
               <h3 className="font-bold text-cyan-900">{item.heading}</h3>
@@ -47,7 +45,7 @@ function WhyInvest() {
             size={"lg"}
             className=" self-center bg-accent text-primary-800 font-semibold"
           >
-            Invest with Us
+            Partner with Us
             <Tractor />
           </Button>
         </div>
