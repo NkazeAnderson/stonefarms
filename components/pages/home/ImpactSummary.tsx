@@ -35,10 +35,10 @@ function ImpactSummary() {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {hasIntersected &&
           [
-            { count: 12, title: "Projects completed" },
-            { count: 145, title: "Youths trained" },
+            { count: 481, title: "Youths trained" },
+            { count: 258, title: "Attestations issued" },
             { count: 33, title: "Agrepreneurs" },
-            { count: 7, title: "Programs" },
+            { count: 12, title: "Projects" },
           ].map((item, index) => (
             <div key={index}>
               <ChartContainer

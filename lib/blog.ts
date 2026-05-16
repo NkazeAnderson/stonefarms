@@ -17,6 +17,40 @@ export type WordPressCategory = {
   taxonomy: string;
 };
 
+export type YoastHeadJson = {
+  title?: string;
+  description?: string;
+  robots?: {
+    index?: string;
+    follow?: string;
+    "max-snippet"?: string;
+    "max-image-preview"?: string;
+    "max-video-preview"?: string;
+  };
+  canonical?: string;
+  og_locale?: string;
+  og_type?: string;
+  og_title?: string;
+  og_description?: string;
+  og_url?: string;
+  og_site_name?: string;
+  article_publisher?: string;
+  article_published_time?: string;
+  article_modified_time?: string;
+  og_image?: [
+    {
+      width?: number;
+      height?: number;
+      url?: string;
+      type?: string;
+    }
+  ];
+  author?: string;
+  twitter_card?: string;
+  twitter_misc?: Record<string, string>;
+  schema?: any;
+};
+
 export type WordPressPost = {
   id: number;
   slug: string;
@@ -30,9 +64,7 @@ export type WordPressPost = {
     "wp:featuredmedia"?: FeaturedMedia[];
     "wp:term"?: WordPressCategory[][];
   };
-  yoast_head_json?: {
-    og_image?: [{ url: string }];
-  };
+  yoast_head_json?: YoastHeadJson;
 };
 
 const blogsBaseUrl = process.env.NEXT_PUBLIC_BLOGS_BASE_URL;
@@ -51,7 +83,7 @@ export async function getAllBlogPosts(): Promise<WordPressPost[]> {
     const response = await fetch(
       `${WORDPRESS_API_URL}/posts?per_page=100&page=${page}&_embed&_fields=id,slug,date,title,excerpt,content,link,categories,_embedded,yoast_head_json`,
       {
-        next: { revalidate: 60 },
+        next: { revalidate: 86400 },
       },
     );
 

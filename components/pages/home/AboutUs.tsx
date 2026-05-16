@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Volume2, VolumeX } from "lucide-react";
+import Link from "next/link";
 import React, { useState, useRef, useEffect } from "react";
 
 function AboutUs() {
@@ -69,7 +70,9 @@ function AboutUs() {
                 <li>Scope: Cameroon & Pan-African Expansion</li>
               </ul>
 
-              <p className="py-4 font-bold text-gray-600">Read more...</p>
+              <Link href={"/about-us#general"}>
+                <p className="py-4 font-bold text-gray-600">Read more...</p>
+              </Link>
             </TabsContent>
             <TabsContent value="mission">
               <p>
@@ -79,7 +82,9 @@ function AboutUs() {
                 to eliminate waste and maximize economic stability.
               </p>
 
-              <p className="py-4 font-bold text-gray-600 ">Read more...</p>
+              <Link href={"/about-us#mission"}>
+                <p className="py-4 font-bold text-gray-600 ">Read more...</p>
+              </Link>
             </TabsContent>
             <TabsContent value="vision">
               <p>
@@ -89,8 +94,9 @@ function AboutUs() {
                 biodiverse hubs that alleviate poverty and resist climate
                 change.
               </p>
-
-              <p className="py-4 font-bold text-gray-600">Read more...</p>
+              <Link href={"/about-us#vision"}>
+                <p className="py-4 font-bold text-gray-600">Read more...</p>
+              </Link>
             </TabsContent>
             <TabsList className=" gap-2">
               {tabs.map((item) => (

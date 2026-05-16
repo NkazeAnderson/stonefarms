@@ -208,7 +208,7 @@ export const whyWorkWithUs: {
     heading: "Sustainable Impact",
     description:
       "Partner with us to drive meaningful change. Our initiatives focus on long-term environmental benefits and community development, creating lasting positive outcomes for food security and biodiversity.",
-    image: "/rio.jpg",
+    image: "/gallery/1729193420652.jpg",
     backgroundColor: "#F8ABCF",
   },
 
@@ -216,7 +216,7 @@ export const whyWorkWithUs: {
     heading: "Scalable Solutions",
     description:
       "From local farms to regional programs, we have the expertise and infrastructure to implement sustainable agricultural solutions at any scale, ensuring quality and environmental standards are maintained.",
-    image: "/lg-scale-pg.jpg",
+    image: "/gallery/PXL_20220820_085952377-1.jpg",
     backgroundColor: "#ABD7F8",
   },
   {
@@ -230,7 +230,7 @@ export const whyWorkWithUs: {
     heading: "Expert Engineering",
     description:
       "Innovation through expertise. Our certified engineers integrate advanced soil science and irrigation technology to optimize land health and productivity sustainably.",
-    image: "/certified-eng.jpg",
+    image: "/gallery/23779791448_status_c4fdf44ea0e74d8d9312525d3c990d16.jpg",
     backgroundColor: "#ABF8EB",
   },
 ];
@@ -258,7 +258,6 @@ export const testimonials: Testimonial[] = [
     job: "PhD Researcher",
   },
 ];
-
 
 export const team: TeamMemberT[] = [
   {

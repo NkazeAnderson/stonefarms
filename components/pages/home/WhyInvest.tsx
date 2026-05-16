@@ -3,6 +3,7 @@ import React from "react";
 import { WhyWorkWithUsImages } from "./HomeClient";
 import { Button } from "@/components/ui/button";
 import { Tractor } from "lucide-react";
+import Link from "next/link";
 
 function WhyInvest() {
   return (
@@ -24,7 +25,6 @@ function WhyInvest() {
                     ? "bg-primary-200 top-56 md:top-64"
                     : "bg-primary-300 top-68 md:top-80"
             }`}
-            
           >
             <div className="flex-2">
               <h3 className="font-bold text-cyan-900">{item.heading}</h3>
@@ -41,13 +41,15 @@ function WhyInvest() {
         ))}
 
         <div className="flex py-3 h-56 flex-col justify-end sticky top-[230px] ">
-          <Button
-            size={"lg"}
-            className=" self-center bg-accent text-primary-800 font-semibold"
-          >
-            Partner with Us
-            <Tractor />
-          </Button>
+          <Link href={"/contact"}>
+            <Button
+              size={"lg"}
+              className=" self-center bg-accent text-primary-800 font-semibold"
+            >
+              Partner with Us
+              <Tractor />
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

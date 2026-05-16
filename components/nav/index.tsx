@@ -17,6 +17,7 @@ export const naveLinks: NavLink[] = [
   { text: "about us", link: "/about-us" },
   { text: "blogs", link: "/blog" },
   { text: "contact us", link: "/contact-us" },
+  { text: "gallery", link: "/gallery" },
 ];
 
 function NavBar() {

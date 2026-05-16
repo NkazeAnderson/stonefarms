@@ -16,13 +16,11 @@ import { team } from "@/constants";
 import TeamSection from "./TeamSection";
 
 function AboutUsPage() {
-
   return (
     <>
       <div className=" w-full h-[50vh] pt-20">
-       
         <div className="bg-[url(/IMG-20240810-WA0112.jpg)] bg-cover bg-no-repeat bg-center relative flex justify-center items-center h-full bg-fixed">
-        <div className="absolute inset-0 bg-primary-500/50 border"></div>
+          <div className="absolute inset-0 bg-primary-500/50 border"></div>
           <h1 className=" text-white text [-webkit-text-stroke:2px_green] z-10">
             About us
           </h1>
@@ -40,11 +38,16 @@ function AboutUsPage() {
         <div className="flex flex-col md:flex-row gap-4">
           <div className="flex-1">
             <div className=" aspect-square lg:aspect-square relative">
-              <Image src={"/img-1.jpg"} alt="Stonefarms group" fill  className="rounded-md shadow-lg"/>
+              <Image
+                src={"/img-1.jpg"}
+                alt="Stonefarms group"
+                fill
+                className="rounded-md shadow-lg"
+              />
             </div>
           </div>
           <div className="flex-4">
-            <p>
+            <p id="general">
               We are perfecting agriculture in Cameroon 🇨🇲 by embracing
               ecological, economical, and sustainable approaches to food
               production. Committed to environmental stewardship, biodiversity
@@ -58,7 +61,7 @@ function AboutUsPage() {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2">
               <div className=" p-4 border-r-2 border-primary-200 rounded-sm">
-                <h3>Mission</h3>
+                <h3 id="mission">Mission</h3>
                 <p>
                   Founded in 2019 with registration number{" "}
                   <b> Reg N⁰ 011/ARDA/F.34/ALPAS </b>, in conformity with{" "}
@@ -76,7 +79,7 @@ function AboutUsPage() {
                 </p>
               </div>
               <div className=" p-4 border-l-2 border-primary-200 rounded-sm">
-                <h3>Vision</h3>
+                <h3 id="vision">Vision</h3>
                 <p>
                   Our mission is to develop and promote an agricultural ideology
                   tailored to the unique needs of the African population. We
@@ -148,8 +151,8 @@ function AboutUsPage() {
           </div>
         </div>
       </section>
-    <TeamSection />
- <ProjectsSection />
+      <TeamSection />
+      <ProjectsSection />
       <section className=" px-4 md:px-20 py-10 space-y-4">
         <h2 className=" text-primary">Daily activities</h2>
         <ul className=" list-disc  ml-4">
