@@ -9,15 +9,6 @@ import AppContextProvider from "@/components/context/AppContext";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 const blogsBaseUrl =
   process.env.NEXT_PUBLIC_BLOGS_BASE_URL ?? "https://stonefarms.org";
