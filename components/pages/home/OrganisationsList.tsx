@@ -1,28 +1,28 @@
 import Image from "next/image";
 import React from "react";
 import { OrganisationsListAnimation } from "./HomeClient";
-const organisationsList:{logo:string, name:string}[] = [
+const organisationsList: { logo: string; name: string }[] = [
   {
     name: "Togeva",
-    logo:"/togeva.png"
+    logo: "/togeva.webp",
   },
   {
     name: "Aboyerd",
-    logo:"/aboyerd.png"
+    logo: "/aboyerd.webp",
   },
   {
-  name: "Nature Guide",
-  logo:"/nature_guide.png"
-},
+    name: "Nature Guide",
+    logo: "/nature_guide.webp",
+  },
   {
-  name: "Verdiante Technologie",
-  logo:"/Groupe_general_verdiante_technologie.png"
-},
+    name: "Verdiante Technologie",
+    logo: "/Groupe_general_verdiante_technologie.webp",
+  },
   {
-  name: "Humanitarian Hope Association",
-  logo:"/humanitarian_hope_association.png"
-},
-]
+    name: "Humanitarian Hope Association",
+    logo: "/humanitarian_hope_association.webp",
+  },
+];
 function OrganisationsList() {
   return (
     <>

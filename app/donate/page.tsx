@@ -43,7 +43,7 @@ export default function DonatePage() {
       {/* Hero Section */}
       <section className="relative h-[60vh] flex items-center justify-center text-white overflow-hidden">
         <Image
-          src="/gallery/FB_IMG_17042115548449014.jpg"
+          src="/gallery/FB_IMG_17042115548449014.webp"
           alt="Impact of agriculture"
           fill
           className="object-cover brightness-50"
@@ -216,7 +216,7 @@ export default function DonatePage() {
 
           <div className="relative aspect-square lg:aspect-auto lg:h-[500px] rounded-3xl overflow-hidden shadow-2xl">
             <Image
-              src="/gallery/IMG_20240907_140519.jpg"
+              src="/gallery/IMG_20240907_140519.webp"
               alt="Happy farmer"
               fill
               className="object-scale-down"

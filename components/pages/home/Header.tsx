@@ -11,7 +11,7 @@ function Header() {
     <div
       className="relative grid grid-cols-1 items-center bg-no-repeat bg-cover pt-28 md:min-h-[60vh] md:bg-fixed md:grid-cols-2 md:pt-36 lg:min-h-[95vh] lg:pt-40 z-10"
       style={{
-        backgroundImage: "url('/earth-cross-section.png')",
+        backgroundImage: "url('/earth-cross-section.webp')",
       }}
     >
       <div className="md:hidden absolute inset-0 z-40 pointer-events-none">

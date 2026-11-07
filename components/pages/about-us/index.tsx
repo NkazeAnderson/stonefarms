@@ -19,7 +19,7 @@ function AboutUsPage() {
   return (
     <>
       <div className=" w-full h-[50vh] pt-20">
-        <div className="bg-[url(/IMG-20240810-WA0112.jpg)] bg-cover bg-no-repeat bg-center relative flex justify-center items-center h-full bg-fixed">
+        <div className="bg-[url(/IMG-20240810-WA0112.webp)] bg-cover bg-no-repeat bg-center relative flex justify-center items-center h-full bg-fixed">
           <div className="absolute inset-0 bg-primary-500/50 border"></div>
           <h1 className="z-10 text-5xl font-bold text-white drop-shadow-lg md:text-6xl">
             About us
@@ -39,7 +39,7 @@ function AboutUsPage() {
           <div className="flex-1">
             <div className=" aspect-square lg:aspect-square relative">
               <Image
-                src={"/img-1.jpg"}
+                src={"/img-1.webp"}
                 alt="Stonefarms group"
                 fill
                 className="rounded-md shadow-lg"

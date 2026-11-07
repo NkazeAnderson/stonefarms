@@ -127,7 +127,7 @@ function AboutUs() {
             className=" absolute inset-0 bg-black/30 
              font-black text-4xl text-center text-transparent  mix-blend-multiply"
           >
-            <div className="bg-[url('/LOGO-white-slim.png')] size-full bg-center bg-no-repeat mix-blend-screen bg-contain"></div>
+            <div className="bg-[url('/LOGO-white-slim.webp')] size-full bg-center bg-no-repeat mix-blend-screen bg-contain"></div>
           </div>
           <div className="absolute right-4 top-4">
             <Button

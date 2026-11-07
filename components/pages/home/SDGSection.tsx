@@ -13,7 +13,7 @@ function SDGSection() {
         </h4>
         <div className="h-12 aspect-video relative">
           <Image
-            src={"/Flag_of_the_United_Nations.png"}
+            src={"/Flag_of_the_United_Nations.webp"}
             alt="United nations flag"
             fill
           />

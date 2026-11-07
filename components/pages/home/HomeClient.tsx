@@ -30,7 +30,7 @@ function HeaderLeftGridCol() {
     <div className="absolute md:left-1/8 md:top-6 inset-0 headerCassava">
       <div className="relative h-full w-full lg:w-1/2 z-50">
         <Image
-          src={"/cassava.png"}
+          src={"/cassava.webp"}
           alt="Header Cassava"
           fill
           className="object-contain"

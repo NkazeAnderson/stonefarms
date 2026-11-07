@@ -9,7 +9,7 @@ function Logo({
 }) {
   return (
     <Link href={"/"}>
-      <Image src={`/LOGO-${color}.png`} width={100} height={60} alt="Logo" />
+      <Image src={`/LOGO-${color}.webp`} width={100} height={60} alt="Logo" />
     </Link>
   );
 }

@@ -3,7 +3,7 @@ import { TeamMemberT } from "./components/TeamMemberCard";
 export const services: Service[] = [
   {
     title: "Agricultural Consultancy",
-    image: "/consultancy.jpg",
+    image: "/consultancy.webp",
     description: [
       "Assessment and planning",
       "Technical advice",
@@ -15,7 +15,7 @@ export const services: Service[] = [
   },
   {
     title: "FEASIBILTY STUDY",
-    image: "/feasibility.jpg",
+    image: "/feasibility.webp",
     description: [
       "Executive summary",
       "Project description",
@@ -27,7 +27,7 @@ export const services: Service[] = [
   },
   {
     title: "SOIL ANALYSIS",
-    image: "/soil-analysis.jpg",
+    image: "/soil-analysis.webp",
     description: [
       "Sample collection",
       "Physical properties analysis",
@@ -38,7 +38,7 @@ export const services: Service[] = [
   },
   {
     title: "ESTIMATIVE PLAN",
-    image: "/estimative-plan.png",
+    image: "/estimative-plan.webp",
     description: [
       "Project overview",
       "Cost categories",
@@ -50,7 +50,7 @@ export const services: Service[] = [
   },
   {
     title: "PROJECT CONCEPTION AND MOUNTING",
-    image: "/conception.jpg",
+    image: "/conception.webp",
     description: [
       "Idea generation",
       "Initial research",
@@ -61,7 +61,7 @@ export const services: Service[] = [
   },
   {
     title: "BUSINESS PLAN",
-    image: "/business-plan.jpg",
+    image: "/business-plan.webp",
     description: [
       "Executive summary",
       "Farm description",
@@ -72,7 +72,7 @@ export const services: Service[] = [
   },
   {
     title: "PLANT QUALITY CONTROL",
-    image: "/quality-control.jpg",
+    image: "/quality-control.webp",
     description: [
       "Quality standards and specifications",
       "Inspection and testing",
@@ -83,7 +83,7 @@ export const services: Service[] = [
   },
   {
     title: "DESIGN OF IRRIGATION SYSTEMS",
-    image: "/irrigation.jpg",
+    image: "/irrigation.webp",
     description: [
       "Assessment and planning",
       "System design",
@@ -95,7 +95,7 @@ export const services: Service[] = [
   },
   {
     title: "SURVEY AND MAPPING",
-    image: "/Survey-Services.jpg",
+    image: "/Survey-Services.webp",
     description: [
       "Survey planning",
       "Data collection",
@@ -109,7 +109,7 @@ export const services: Service[] = [
 
 export const sdgs: SDG[] = [
   {
-    image: "/sdg/E_SDG_Icons-01.jpg",
+    image: "/sdg/E_SDG_Icons-01.webp",
     actions: [
       "Empowering farmers economically",
       "Job creation",
@@ -117,7 +117,7 @@ export const sdgs: SDG[] = [
     ],
   },
   {
-    image: "/sdg/E_SDG_Icons-02.jpg",
+    image: "/sdg/E_SDG_Icons-02.webp",
     actions: [
       "Increased food production",
       "Agroecological farming",
@@ -125,7 +125,7 @@ export const sdgs: SDG[] = [
     ],
   },
   {
-    image: "/sdg/E_SDG_Icons-03.jpg",
+    image: "/sdg/E_SDG_Icons-03.webp",
     actions: [
       "Organic farming for healthier life",
       "Training on sustainable nutrition",
@@ -133,7 +133,7 @@ export const sdgs: SDG[] = [
     ],
   },
   {
-    image: "/sdg/E_SDG_Icons-04.jpg",
+    image: "/sdg/E_SDG_Icons-04.webp",
     actions: [
       "Capacity building for youth and farmers",
       "Vocational training",
@@ -141,7 +141,7 @@ export const sdgs: SDG[] = [
     ],
   },
   {
-    image: "/sdg/E_SDG_Icons-05.jpg",
+    image: "/sdg/E_SDG_Icons-05.webp",
     actions: [
       "Empowering women with agriculture",
       "Including women leadership",
@@ -149,7 +149,7 @@ export const sdgs: SDG[] = [
     ],
   },
   {
-    image: "/sdg/E_SDG_Icons-06.jpg",
+    image: "/sdg/E_SDG_Icons-06.webp",
     actions: [
       "Promoting water efficient irrigation",
       "Minimum water contamination with organic fertilizers",
@@ -157,7 +157,7 @@ export const sdgs: SDG[] = [
     ],
   },
   {
-    image: "/sdg/E_SDG_Icons-11.jpg",
+    image: "/sdg/E_SDG_Icons-11.webp",
     actions: [
       "Greenhouse farming",
       "Urban farming initiative",
@@ -165,7 +165,7 @@ export const sdgs: SDG[] = [
     ],
   },
   {
-    image: "/sdg/E_SDG_Icons-12.jpg",
+    image: "/sdg/E_SDG_Icons-12.webp",
     actions: [
       "Reduced food waste",
       "Promote local organic products",
@@ -173,7 +173,7 @@ export const sdgs: SDG[] = [
     ],
   },
   {
-    image: "/sdg/E_SDG_Icons-13.jpg",
+    image: "/sdg/E_SDG_Icons-13.webp",
     actions: [
       "Climare smart agriculture",
       "Tree planting",
@@ -181,7 +181,7 @@ export const sdgs: SDG[] = [
     ],
   },
   {
-    image: "/sdg/E_SDG_Icons-15.jpg",
+    image: "/sdg/E_SDG_Icons-15.webp",
     actions: [
       "Biodiversity conservation",
       "Protection of endangered species",
@@ -189,7 +189,7 @@ export const sdgs: SDG[] = [
     ],
   },
   {
-    image: "/sdg/E_SDG_Icons-17.jpg",
+    image: "/sdg/E_SDG_Icons-17.webp",
     actions: [
       "Impactful collaborations and partnerships",
       "Youth engagement",
@@ -208,7 +208,7 @@ export const whyWorkWithUs: {
     heading: "Sustainable Impact",
     description:
       "Partner with us to drive meaningful change. Our initiatives focus on long-term environmental benefits and community development, creating lasting positive outcomes for food security and biodiversity.",
-    image: "/gallery/1729193420652.jpg",
+    image: "/gallery/1729193420652.webp",
     backgroundColor: "#F8ABCF",
   },
 
@@ -216,42 +216,42 @@ export const whyWorkWithUs: {
     heading: "Scalable Solutions",
     description:
       "From local farms to regional programs, we have the expertise and infrastructure to implement sustainable agricultural solutions at any scale, ensuring quality and environmental standards are maintained.",
-    image: "/gallery/PXL_20220820_085952377-1.jpg",
+    image: "/gallery/PXL_20220820_085952377-1.webp",
     backgroundColor: "#ABD7F8",
   },
   {
     heading: "Transparent Operations",
     description:
       "We prioritize accountability and openness. Through our advanced monitoring systems, we provide real-time insights and precise resource management for all our collaborative projects.",
-    image: "/pg-management-tools.jpg",
+    image: "/pg-management-tools.webp",
     backgroundColor: "#F8C4AB",
   },
   {
     heading: "Expert Engineering",
     description:
       "Innovation through expertise. Our certified engineers integrate advanced soil science and irrigation technology to optimize land health and productivity sustainably.",
-    image: "/gallery/23779791448_status_c4fdf44ea0e74d8d9312525d3c990d16.jpg",
+    image: "/gallery/23779791448_status_c4fdf44ea0e74d8d9312525d3c990d16.webp",
     backgroundColor: "#ABF8EB",
   },
 ];
 
 export const testimonials: Testimonial[] = [
   {
-    profilePic: "/drazz.jpeg",
+    profilePic: "/drazz.webp",
     text: "STONEFARMS has been one of the most innovative and pace-setting outfits in the Agro space. Their commitment to, sustainability, excellence and organic practices are worthy of emulation. I highly recommend them.",
     rating: 5,
     name: "Drazz Francios",
     job: "Community Farmer Leader",
   },
   {
-    profilePic: "/fotang_chefor.jpeg",
+    profilePic: "/fotang_chefor.webp",
     text: "StoneFarms is advancing climate-smart agriculture (CSA) in Dschang, Cameroon, by partnering with universities to enhance sustainable farming. Through hands-on training at the University of Dschang and Foyamghem Institute, students learn eco-friendly agricultural practices while developing fruit tree plots and nutritional gardens.",
     rating: 5,
     name: "Dr. Fotang Chefor",
     job: "Professor",
   },
   {
-    profilePic: "/fomujong_derrick.jpeg",
+    profilePic: "/fomujong_derrick.webp",
     text: "Since its Inception, STONEFARMS has always pride itself on Socioeconomic and Environmental Sustainability. This is evident in the impact they’ve had on the communities touched. They have my highest recommendation without reservation. Think Sustainability, think STONEFARMS.",
     rating: 5,
     name: "Fomujong Derrick",
@@ -263,51 +263,51 @@ export const team: TeamMemberT[] = [
   {
     name: "Egr. Nkemofa Godwill F.",
     title: "Director / Agronomist and Climate Advocate",
-    profilePic: "/team/Nkemofa_Godwill.png",
+    profilePic: "/team/Nkemofa_Godwill.webp",
   },
   {
     name: "Egr. Ali Nfoh H. T.",
     title: "Communication Manager / Agricultural Engineer",
-    profilePic: "/team/Ali_Nfoh_Hensel.png",
+    profilePic: "/team/Ali_Nfoh_Hensel.webp",
   },
   {
     name: "Dr. Ndifon Dimanche Kengah",
     title: "Integrated Rural Development Expert",
-    profilePic: "/team/Ndifon_Dimanche.png",
+    profilePic: "/team/Ndifon_Dimanche.webp",
   },
   {
     name: "Egr. MENGETOH JANIVER P.",
     title: "Project Manager / Agricultural Engineer",
-    profilePic: "/team/Mengetoh_Promise_Jeniver.png",
+    profilePic: "/team/Mengetoh_Promise_Jeniver.webp",
   },
   {
     name: "Egr. Bongkiyoung Manet",
     title: "Program manager / Agricultural Engineer",
-    profilePic: "/team/Bongkiyoung_Manet.png",
+    profilePic: "/team/Bongkiyoung_Manet.webp",
   },
   {
     name: "Engr. Ngoeko Tefonou Bernadette Sorele",
     title: "Development Expert Agricultural engineer",
-    profilePic: "/team/Ngoeko_Tefonou.png",
+    profilePic: "/team/Ngoeko_Tefonou.webp",
   },
   {
     name: "Dr. KAJOH Julius BOYAH",
     title: "Development Expert Plant physiologist/Biotechnologist",
-    profilePic: "/team/KAJOH_Julius.jpg",
+    profilePic: "/team/KAJOH_Julius.webp",
   },
   {
     name: "Madame Kanjoh Peninnah Mbuli",
     title: "Secretary. Nutritionist",
-    profilePic: "/team/Kanjoh_Peninnah.png",
+    profilePic: "/team/Kanjoh_Peninnah.webp",
   },
   {
     name: "Mr Wirkom Bertus",
     title: "Vice Secretary. Climate Expert",
-    profilePic: "/team/Wirkom_Bertus.png",
+    profilePic: "/team/Wirkom_Bertus.webp",
   },
   {
     name: "Ndi Shey Reuben",
     title: "Media and Graphic Designer",
-    profilePic: "/team/Shey_Reuben.jpg",
+    profilePic: "/team/Shey_Reuben.webp",
   },
 ];

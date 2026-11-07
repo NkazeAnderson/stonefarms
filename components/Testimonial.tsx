@@ -8,7 +8,7 @@ function Testimonial({ testimonial }: { testimonial: Testimonial }) {
       <div>
         <div className=" relative w-10 aspect-square ">
           <Image
-            src={testimonial.profilePic ?? "/faceHolder.png"}
+            src={testimonial.profilePic ?? "/faceHolder.webp"}
             alt="User profile picture"
             fill
             className="object-cover rounded-full"
