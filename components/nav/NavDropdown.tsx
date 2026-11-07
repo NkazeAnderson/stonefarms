@@ -62,7 +62,8 @@ export default function NavDropdown({
       onMouseLeave={() => setOpen(false)}
       onFocus={() => setOpen(true)}
       onBlur={(e) => {
-        if (!e.currentTarget.contains(e.relatedTarget as Node | null)) setOpen(false);
+        if (!e.currentTarget.contains(e.relatedTarget as Node | null))
+          setOpen(false);
       }}
       onKeyDown={(e) => {
         if (e.key === "Escape") setOpen(false);

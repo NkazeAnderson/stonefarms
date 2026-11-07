@@ -8,9 +8,7 @@ import Link from "next/link";
 function WhyInvest() {
   return (
     <section className="z-10 px-4 md:px-20 py-10">
-      <h2 className="text-primary pt-6 lg:pt-10 pb-4">
-        Why Partner with Us?
-      </h2>
+      <h2 className="text-primary pt-6 lg:pt-10 pb-4">Why Partner with Us?</h2>
       <div className="relative flex flex-col gap-6 min-h-[80vh]">
         {whyWorkWithUs.map((item, i) => (
           <div

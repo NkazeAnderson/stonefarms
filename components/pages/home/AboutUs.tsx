@@ -25,7 +25,7 @@ function AboutUs() {
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     if (videoRef.current) {
@@ -44,7 +44,9 @@ function AboutUs() {
   };
   return (
     <section className="z-10">
-      <h4 className=" px-4 md:px-10 lg:px-20 text-primary pt-10 pb-4">About us</h4>
+      <h4 className=" px-4 md:px-10 lg:px-20 text-primary pt-10 pb-4">
+        About us
+      </h4>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
         <div className="px-4 md:px-20">
           <Tabs

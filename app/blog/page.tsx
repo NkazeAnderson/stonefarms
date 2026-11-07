@@ -23,7 +23,9 @@ export default async function BlogsPage({
   }
 
   return (
-    <main className={`${styles.blogPage} bg-slate-50 pb-10 pt-32 md:pt-36 lg:pt-40 sm:pb-14`}>
+    <main
+      className={`${styles.blogPage} bg-slate-50 pb-10 pt-32 md:pt-36 lg:pt-40 sm:pb-14`}
+    >
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {isProjects ? (
           <div className="mb-12 text-center">

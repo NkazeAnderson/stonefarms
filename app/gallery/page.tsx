@@ -5,10 +5,12 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Gallery - Stonefarms",
-  description: "A visual journey through Stonefarms, showcasing our sustainable agricultural practices, community impact, and the beauty of African farming.",
+  description:
+    "A visual journey through Stonefarms, showcasing our sustainable agricultural practices, community impact, and the beauty of African farming.",
   openGraph: {
     title: "Gallery - Stonefarms",
-    description: "A visual journey through Stonefarms, showcasing our sustainable agricultural practices, community impact, and the beauty of African farming.",
+    description:
+      "A visual journey through Stonefarms, showcasing our sustainable agricultural practices, community impact, and the beauty of African farming.",
     type: "website",
   },
 };
@@ -39,14 +41,16 @@ export default function GalleryPage() {
             Our Gallery
           </h1>
           <p className="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
-            Witness the transformation of African agriculture through our lens. 
+            Witness the transformation of African agriculture through our lens.
             From sustainable plots to thriving communities.
           </p>
         </header>
 
         {images.length === 0 ? (
           <div className="text-center py-20 bg-white rounded-3xl border border-slate-200 shadow-sm">
-            <p className="text-lg text-slate-500">No images found in the gallery.</p>
+            <p className="text-lg text-slate-500">
+              No images found in the gallery.
+            </p>
           </div>
         ) : (
           <GalleryGrid images={images} />

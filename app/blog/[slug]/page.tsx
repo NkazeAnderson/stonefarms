@@ -15,7 +15,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata(
   { params }: { params: Promise<{ slug: string }> },
-  parent: ResolvingMetadata
+  parent: ResolvingMetadata,
 ): Promise<Metadata> {
   const slug = (await params).slug;
   const posts = await getAllBlogPosts();
@@ -41,11 +41,12 @@ export async function generateMetadata(
         siteName: yoast.og_site_name,
         type: (yoast.og_type as "article" | "website") || "article",
         locale: yoast.og_locale,
-        images: yoast.og_image?.map(img => ({
-          url: img.url || "",
-          width: img.width,
-          height: img.height,
-        })) || [],
+        images:
+          yoast.og_image?.map((img) => ({
+            url: img.url || "",
+            width: img.width,
+            height: img.height,
+          })) || [],
         publishedTime: yoast.article_published_time,
         modifiedTime: yoast.article_modified_time,
       },
@@ -53,7 +54,7 @@ export async function generateMetadata(
         card: (yoast.twitter_card as any) || "summary_large_image",
         title: yoast.og_title || stripHtml(post.title.rendered),
         description: yoast.og_description || stripHtml(post.excerpt.rendered),
-        images: yoast.og_image?.map(img => img.url || "") || [],
+        images: yoast.og_image?.map((img) => img.url || "") || [],
       },
       alternates: {
         canonical: yoast.canonical,
@@ -62,8 +63,12 @@ export async function generateMetadata(
         index: yoast.robots?.index === "index",
         follow: yoast.robots?.follow === "follow",
         "max-snippet": yoast.robots?.["max-snippet"] ? -1 : undefined,
-        "max-image-preview": yoast.robots?.["max-image-preview"] ? "large" : undefined,
-        "max-video-preview": yoast.robots?.["max-video-preview"] ? -1 : undefined,
+        "max-image-preview": yoast.robots?.["max-image-preview"]
+          ? "large"
+          : undefined,
+        "max-video-preview": yoast.robots?.["max-video-preview"]
+          ? -1
+          : undefined,
       } as any,
     };
   }
@@ -92,7 +97,9 @@ export default async function BlogPostPage({
   }
 
   return (
-    <main className={`${styles.blogPage} bg-slate-50 pb-10 pt-32 md:pt-36 lg:pt-40 sm:pb-14`}>
+    <main
+      className={`${styles.blogPage} bg-slate-50 pb-10 pt-32 md:pt-36 lg:pt-40 sm:pb-14`}
+    >
       {post.yoast_head_json?.schema && (
         <script
           type="application/ld+json"

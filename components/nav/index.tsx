@@ -31,9 +31,7 @@ function NavBar() {
                   <div className=" leading-4 capitalize">
                     {item.text}
                     <div className="h-0.5 w-full">
-                      <div
-                        className="h-full w-0 bg-accent transition-all duration-300 group-hover:w-full"
-                      ></div>
+                      <div className="h-full w-0 bg-accent transition-all duration-300 group-hover:w-full"></div>
                     </div>
                   </div>
                 </NavLinkClient>
