@@ -8,6 +8,7 @@ import { useAppContext } from "../context/AppContext";
 import DonateButton from "./DonateButton";
 import NavDropdown from "./NavDropdown";
 import NavLinkClient from "./NavLinkClient";
+import LanguageSwitcher from "./LanguageSwitcher";
 import { naveLinks } from "./links";
 
 export function MobileNavButton() {
@@ -89,6 +90,8 @@ export function MobileNavOverlay() {
             ),
           )}
         </ul>
+
+        <LanguageSwitcher placement="up" className="self-center" />
 
         <div className="self-center" onClick={closeMobileNav}>
           <DonateButton />

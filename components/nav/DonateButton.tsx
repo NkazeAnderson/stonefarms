@@ -6,7 +6,7 @@ export default function DonateButton() {
   return (
     <Button
       asChild
-      className="rounded-4xl bg-accent text-white hover:bg-accent/90"
+      className="rounded-4xl bg-accent text-white hover:brightness-110"
       size="lg"
     >
       <Link href="/donate">

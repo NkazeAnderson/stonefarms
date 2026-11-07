@@ -1,0 +1,23 @@
+/* Hide Google's top banner, which pushes the page down. */
+.goog-te-banner-frame,
+.skiptranslate > iframe,
+#goog-gt-tt,
+.goog-te-balloon-frame {
+  display: none !important;
+}
+
+body {
+  top: 0 !important;
+}
+
+.goog-logo-link,
+.goog-te-gadget > span {
+  display: none !important;
+}
+
+/* Google's hover highlight on translated text. */
+.goog-text-highlight,
+[class*="VIpgJd-yAWNEb-VIpgJd-fmcmS"] {
+  background: none !important;
+  box-shadow: none !important;
+}

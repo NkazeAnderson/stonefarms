@@ -4,6 +4,8 @@ import Link from "next/link";
 import NavLinkClient from "./NavLinkClient";
 import DonateButton from "./DonateButton";
 import NavDropdown from "./NavDropdown";
+import GoogleTranslate from "./GoogleTranslate";
+import LanguageSwitcher from "./LanguageSwitcher";
 import { MobileNavButton } from "./MobileNav";
 import { naveLinks } from "./links";
 
@@ -40,6 +42,8 @@ function NavBar() {
           );
         })}
       </ul>
+      <GoogleTranslate />
+      <LanguageSwitcher className="mx-2 hidden lg:block" />
       <div className=" hidden lg:block">
         <DonateButton />
       </div>

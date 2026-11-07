@@ -93,7 +93,7 @@ function Footer() {
             />
             <Button
               type="submit"
-              className="bg-accent text-green-950 hover:bg-accent/90"
+              className="bg-accent text-green-950 hover:brightness-110"
             >
               Subscribe
             </Button>
