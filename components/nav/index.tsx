@@ -6,16 +6,26 @@ import Link from "next/link";
 import { Url } from "next/dist/shared/lib/router/router";
 import NavLinkClient, { MobileNav } from "./NavLinkClient";
 import DonateButton from "./DonateButton";
+import NavDropdown from "./NavDropdown";
 
 export type NavLink = {
   text: string;
   link: Url;
+  children?: { text: string; link: string }[];
 };
 
 export const naveLinks: NavLink[] = [
   { text: "home", link: "/" },
   { text: "about us", link: "/about-us" },
-  { text: "blogs", link: "/blog" },
+  {
+    text: "blogs",
+    link: "/blog",
+    children: [
+      { text: "Blogs", link: "/blog" },
+      { text: "Projects", link: "/blog?category=projects" },
+      { text: "Stories & Impact", link: "/stories" },
+    ],
+  },
   { text: "contact us", link: "/contact-us" },
   { text: "gallery", link: "/gallery" },
 ];
@@ -26,6 +36,14 @@ function NavBar() {
       <Logo />
       <ul className=" lg:flex lg:gap-8 gap-4 text-lg font-medium hidden">
         {naveLinks.map((item) => {
+          if (item.children)
+            return (
+              <NavDropdown
+                key={item.text}
+                text={item.text}
+                items={item.children}
+              />
+            );
           return (
             <Link href={item.link} key={item.text}>
               <li className="hover:text-green-700 group block text-green-50">
@@ -45,11 +63,9 @@ function NavBar() {
         })}
       </ul>
       <div className=" hidden lg:block">
-
-      <DonateButton/>
+        <DonateButton />
       </div>
-    <MobileNav />
- 
+      <MobileNav />
     </nav>
   );
 }
