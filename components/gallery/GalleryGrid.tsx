@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
 interface GalleryGridProps {
@@ -8,7 +8,9 @@ interface GalleryGridProps {
 }
 
 export default function GalleryGrid({ images }: GalleryGridProps) {
-  const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
+  const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(
+    null,
+  );
 
   const openImage = (index: number) => {
     setSelectedImageIndex(index);
@@ -20,6 +22,23 @@ export default function GalleryGrid({ images }: GalleryGridProps) {
     document.body.style.overflow = "auto";
   };
 
+  useEffect(() => {
+    if (selectedImageIndex === null) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") closeImage();
+      if (e.key === "ArrowRight")
+        setSelectedImageIndex((i) =>
+          i === null ? i : (i + 1) % images.length,
+        );
+      if (e.key === "ArrowLeft")
+        setSelectedImageIndex((i) =>
+          i === null ? i : (i - 1 + images.length) % images.length,
+        );
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [selectedImageIndex, images.length]);
+
   const nextImage = (e: React.MouseEvent) => {
     e.stopPropagation();
     if (selectedImageIndex !== null) {
@@ -30,7 +49,9 @@ export default function GalleryGrid({ images }: GalleryGridProps) {
   const prevImage = (e: React.MouseEvent) => {
     e.stopPropagation();
     if (selectedImageIndex !== null) {
-      setSelectedImageIndex((selectedImageIndex - 1 + images.length) % images.length);
+      setSelectedImageIndex(
+        (selectedImageIndex - 1 + images.length) % images.length,
+      );
     }
   };
 
@@ -38,10 +59,12 @@ export default function GalleryGrid({ images }: GalleryGridProps) {
     <>
       <div className="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
         {images.map((src, index) => (
-          <div
+          <button
+            type="button"
             key={index}
+            aria-label={`View image ${index + 1}`}
             onClick={() => openImage(index)}
-            className="break-inside-avoid group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 bg-white border border-slate-100 cursor-pointer"
+            className="block w-full break-inside-avoid group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 bg-white border border-slate-100 cursor-pointer"
           >
             <img
               src={src}
@@ -50,36 +73,41 @@ export default function GalleryGrid({ images }: GalleryGridProps) {
               loading="lazy"
             />
             <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <div className="bg-white/20 backdrop-blur-md p-3 rounded-full scale-0 group-hover:scale-100 transition-transform duration-500">
-                    <span className="text-white text-xs font-bold uppercase tracking-widest">View</span>
-                </div>
+              <div className="bg-white/20 backdrop-blur-md p-3 rounded-full scale-0 group-hover:scale-100 transition-transform duration-500">
+                <span className="text-white text-xs font-bold uppercase tracking-widest">
+                  View
+                </span>
+              </div>
             </div>
-          </div>
+          </button>
         ))}
       </div>
 
       {/* Lightbox */}
       {selectedImageIndex !== null && (
-        <div 
+        <div
           className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center p-4 backdrop-blur-sm animate-in fade-in duration-300"
           onClick={closeImage}
         >
-          <button 
+          <button
             className="absolute top-6 right-6 text-white/70 hover:text-white transition-colors"
+            aria-label="Close"
             onClick={closeImage}
           >
             <X size={40} strokeWidth={1.5} />
           </button>
 
-          <button 
+          <button
             className="absolute left-4 top-1/2 -translate-y-1/2 text-white/50 hover:text-white transition-colors bg-white/5 hover:bg-white/10 p-4 rounded-full"
+            aria-label="Previous image"
             onClick={prevImage}
           >
             <ChevronLeft size={32} />
           </button>
 
-          <button 
+          <button
             className="absolute right-4 top-1/2 -translate-y-1/2 text-white/50 hover:text-white transition-colors bg-white/5 hover:bg-white/10 p-4 rounded-full"
+            aria-label="Next image"
             onClick={nextImage}
           >
             <ChevronRight size={32} />
@@ -93,7 +121,7 @@ export default function GalleryGrid({ images }: GalleryGridProps) {
               onClick={(e) => e.stopPropagation()}
             />
             <div className="absolute -bottom-12 left-0 right-0 text-center text-white/60 text-sm font-light">
-                {selectedImageIndex + 1} / {images.length}
+              {selectedImageIndex + 1} / {images.length}
             </div>
           </div>
         </div>

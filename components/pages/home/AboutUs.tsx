@@ -103,7 +103,7 @@ function AboutUs() {
                 <TabsTrigger
                   key={item}
                   value={item}
-                  className={`capitalize p-4! ${item === activeTab ? " bg-primary! text-white! " : " border border-primary text-primary! "}`}
+                  className={`capitalize !p-4 ${item === activeTab ? " !bg-primary !text-white " : " border border-primary !text-primary "}`}
                 >
                   {item}
                 </TabsTrigger>

@@ -6,27 +6,32 @@ import NavBar from "@/components/nav";
 import RegisterGsapPlugins from "@/components/RegisterGsapPlugins";
 import Footer from "@/components/footer";
 import AppContextProvider from "@/components/context/AppContext";
+import { MobileNavOverlay } from "@/components/nav/MobileNav";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
-
 
 const blogsBaseUrl =
   process.env.NEXT_PUBLIC_BLOGS_BASE_URL ?? "https://stonefarms.org";
 
 export const metadata: Metadata = {
   title: "Stonefarms - Agricultural experts",
-  description: "Stonefarms is committed to agricultural excellence, food security, green economies, and rural transformation across Africa.",
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://stonefarms.org"),
+  description:
+    "Stonefarms is committed to agricultural excellence, food security, green economies, and rural transformation across Africa.",
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || "https://stonefarms.org",
+  ),
   openGraph: {
     title: "Stonefarms - Agricultural experts",
-    description: "Stonefarms is committed to agricultural excellence, food security, green economies, and rural transformation across Africa.",
+    description:
+      "Stonefarms is committed to agricultural excellence, food security, green economies, and rural transformation across Africa.",
     type: "website",
     siteName: "Stonefarms",
   },
   twitter: {
     card: "summary_large_image",
     title: "Stonefarms - Agricultural experts",
-    description: "Stonefarms is committed to agricultural excellence, food security, green economies, and rural transformation across Africa.",
+    description:
+      "Stonefarms is committed to agricultural excellence, food security, green economies, and rural transformation across Africa.",
   },
 };
 
@@ -111,18 +116,18 @@ export default function RootLayout({
           id="swiper-js"
         ></script>
       </head>
-      <RegisterGsapPlugins />
       <body className="bg-green-50 relative overflow-x-hidden">
+        <RegisterGsapPlugins />
         <AppContextProvider>
-
-        <div className="fixed w-full z-50">
-          <div className=" px-[1%] md:px-[5%] pt-2 md:pt-4 lg:pt-10 pb-2 bg-primary/10 shadow-2xl backdrop-blur-xl rounded-b-2xl">
-            <NavBar />
+          <div className="fixed w-full z-50">
+            <div className=" px-[1%] md:px-[5%] pt-2 md:pt-4 lg:pt-10 pb-2 bg-primary/10 shadow-2xl backdrop-blur-xl rounded-b-2xl">
+              <NavBar />
+            </div>
           </div>
-        </div>
-             
-        {children}
-        <Footer />
+
+          {children}
+          <Footer />
+          <MobileNavOverlay />
         </AppContextProvider>
       </body>
     </html>

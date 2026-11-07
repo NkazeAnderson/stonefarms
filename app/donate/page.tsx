@@ -130,8 +130,13 @@ export default function DonatePage() {
                   </p>
                 </CardContent>
                 <CardFooter>
-                  <Button className="w-full bg-primary hover:bg-primary-600 group-hover:scale-[1.02] transition-transform">
-                    Donate Now <ArrowRight className="ml-2 size-4" />
+                  <Button
+                    asChild
+                    className="w-full bg-primary hover:bg-primary-600"
+                  >
+                    <Link href="#payment">
+                      Donate Now <ArrowRight className="ml-2 size-4" />
+                    </Link>
                   </Button>
                 </CardFooter>
               </Card>
@@ -141,7 +146,10 @@ export default function DonatePage() {
       </section>
 
       {/* Direct Payment Methods */}
-      <section className="py-20 px-4 md:px-20 bg-primary-900 text-white rounded-t-[50px]">
+      <section
+        id="payment"
+        className="scroll-mt-28 py-20 px-4 md:px-20 bg-primary text-white rounded-t-[50px]"
+      >
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
             <h2 className="text-4xl font-bold mb-6">Other Ways to Give</h2>
@@ -226,11 +234,16 @@ export default function DonatePage() {
           For corporate sponsorships or significant philanthropic gifts, please
           reach out to our management team directly.
         </p>
-        <Link href="mailto:info@stonefarms.org?subject=Major%20Partnership">
-          <Button variant="outline" size="lg" className="rounded-full px-10">
+        <Button
+          asChild
+          variant="outline"
+          size="lg"
+          className="rounded-full px-10"
+        >
+          <Link href="mailto:info@stonefarms.org?subject=Major%20Partnership">
             Contact Management
-          </Button>
-        </Link>
+          </Link>
+        </Button>
       </section>
     </main>
   );

@@ -6,6 +6,7 @@ import gsap from "gsap";
 import { Check, CheckCircle, Triangle } from "lucide-react";
 import Image from "next/image";
 import React, { useState } from "react";
+import Link from "next/link";
 
 function HeaderLeftGridCol() {
   useGSAP(() => {
@@ -19,7 +20,7 @@ function HeaderLeftGridCol() {
       scrollTrigger: {
         trigger: ".headerCassava",
         start: "top top",
-        pin:true,
+        pin: true,
         end: "bottom -80%", // Continues progressing well after the header
         scrub: 1, // Ultra-smooth progression
       },
@@ -80,13 +81,12 @@ export default HeaderLeftGridCol;
 
 export function OrganisationsListAnimation() {
   useGSAP(() => {
-    gsap
-      .to(".logoHolder", {
-        translateX: "-25%",
-        ease: "none",
-        duration: 30,
-        repeat: -1,
-      });
+    gsap.to(".logoHolder", {
+      translateX: "-25%",
+      ease: "none",
+      duration: 30,
+      repeat: -1,
+    });
   });
   return null;
 }
@@ -118,7 +118,7 @@ export function Services({ services }: { services: Service[] }) {
   return (
     <section
       id="services"
-      className="z-10 px-6 lg:px-20 pb-10 pt-12 lg:pt-[100px] h-screen bg-primary-200 relative"
+      className="z-10 px-6 lg:px-20 pb-10 pt-12 lg:pt-[100px] min-h-screen md:h-screen bg-primary-200 relative"
     >
       <h2 className="text-primary  pb-10 pt-4 text-center">Our services</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-4">
@@ -126,6 +126,7 @@ export function Services({ services }: { services: Service[] }) {
           <ul className=" list-disc ">
             {services.map((item, i) => (
               <li
+                key={item.title}
                 className={`font-semibold ${i === highlightedIndex ? "text-accent py-3" : "text-primary-100"}`}
               >
                 {item.title}
@@ -135,7 +136,7 @@ export function Services({ services }: { services: Service[] }) {
           </ul>
         </div>
 
-        <div>    
+        <div>
           <div className=" relative w-full aspect-video md:aspect-square ">
             <Image
               src={services[highlightedIndex]?.image ?? ""}
@@ -146,25 +147,24 @@ export function Services({ services }: { services: Service[] }) {
           </div>
         </div>
 
-        
         <div>
           <h4 className=" pb-10 lg:pb-4 text-primary-700">
             {services[highlightedIndex]?.title}
           </h4>
-          <ul className="p-2 border-l-2 border-primary-950 list-none! space-y-1">
+          <ul className="p-2 border-l-2 border-primary-950 list-none space-y-1">
             {services[highlightedIndex]?.description.map((item) => (
-              <li>
+              <li key={item}>
                 <Triangle className="rotate-90 inline mr-2 size-3 fill-black" />{" "}
                 {item}
               </li>
             ))}
           </ul>
         </div>
-          <div className=" absolute bottom-6 right-7">
-            <Button variant={"outline"} className=" rounded-full aspect-square">
-              Chat with us
-            </Button>
-          </div>
+        <div className="flex justify-center md:absolute md:bottom-6 md:right-7">
+          <Button asChild variant="outline" className="rounded-full">
+            <Link href="/contact-us">Contact us</Link>
+          </Button>
+        </div>
       </div>
     </section>
   );

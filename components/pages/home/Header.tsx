@@ -9,41 +9,45 @@ import Link from "next/link";
 function Header() {
   return (
     <div
-      className="md:h-[60vh] lg:h-[95vh] relative bg-no-repeat bg-fixed bg-cover grid grid-cols-1 md:grid-cols-2 items-center z-10"
+      className="relative grid grid-cols-1 items-center bg-no-repeat bg-cover pt-28 md:min-h-[60vh] md:bg-fixed md:grid-cols-2 md:pt-36 lg:min-h-[95vh] lg:pt-40 z-10"
       style={{
         backgroundImage: "url('/earth-cross-section.png')",
       }}
     >
+      <div className="md:hidden absolute inset-0 z-40 pointer-events-none">
+        <HeaderLeftGridCol />
+      </div>
 
-        <div className="md:hidden absolute inset-0 z-40 pointer-events-none">
-          <HeaderLeftGridCol />
-        </div>
+      <div className="relative h-full hidden md:block z-40">
+        <HeaderLeftGridCol />
+      </div>
 
-        <div className="relative h-full hidden md:block z-40">
-          <HeaderLeftGridCol />
-        </div>
-
-        <div className="p-8 lg:p-16 relative z-50">
-          <div className="hero-text-box rounded-2xl bg-green-950/80 p-8 md:p-10 text-green-50 space-y-6">
-            <Badge className="bg-green-950 font-semibold uppercase">
-              StoneFarms
-            </Badge>
-            <h2>Advancing Sustainable Agriculture in Cameroon</h2>
-            <p>
-              StoneFarms is dedicated to promoting sustainable agricultural
-              practices that enhance food security, protect the environment, and
-              support local communities through innovative engineering and
-              ecological stewardship.
-            </p>
-            <Link href={"/blog?category=projects"}>
-              <Button className=" mt-7 bg-green-100 text-green-950">
-                Our Initiatives
-                <Tractor />
-              </Button>
+      <div className="p-8 relative z-50">
+        <div className="hero-text-box rounded-2xl bg-green-950/80 p-8 md:p-10 text-green-50 space-y-6">
+          <Badge className="bg-green-950 font-semibold uppercase">
+            StoneFarms
+          </Badge>
+          <h1 className="text-3xl md:text-4xl font-bold leading-tight">
+            Advancing Sustainable Agriculture in Cameroon
+          </h1>
+          <p>
+            StoneFarms is dedicated to promoting sustainable agricultural
+            practices that enhance food security, protect the environment, and
+            support local communities through innovative engineering and
+            ecological stewardship.
+          </p>
+          <Button
+            asChild
+            size="lg"
+            className="mt-7 bg-green-100 text-green-950 hover:bg-green-200"
+          >
+            <Link href="/blog?category=projects">
+              Our Initiatives
+              <Tractor />
             </Link>
-          </div>
+          </Button>
         </div>
-      
+      </div>
     </div>
   );
 }

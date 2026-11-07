@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { ChevronDown } from "lucide-react";
-import React, { useState } from "react";
+import React, { useId, useState } from "react";
 import { useAppContext } from "../context/AppContext";
 
 type Child = { text: string; link: string };
@@ -18,14 +18,12 @@ export default function NavDropdown({
   mobile?: boolean;
 }) {
   const [open, setOpen] = useState(false);
-  const { toggleMobileNav } = useAppContext();
+  const { closeMobileNav } = useAppContext();
+  const menuId = useId();
 
   if (mobile) {
     return (
-      <li
-        className="list-none text-green-50 py-2"
-        onClick={(e) => e.stopPropagation()}
-      >
+      <li className="list-none text-green-50 py-2">
         <button
           type="button"
           className="flex items-center gap-1 capitalize"
@@ -45,7 +43,7 @@ export default function NavDropdown({
                 <Link
                   href={c.link}
                   className="block hover:text-green-500"
-                  onClick={toggleMobileNav}
+                  onClick={closeMobileNav}
                 >
                   {c.text}
                 </Link>
@@ -58,25 +56,44 @@ export default function NavDropdown({
   }
 
   return (
-    <li className="relative group list-none text-green-50">
+    <li
+      className="group relative list-none text-green-50"
+      onMouseEnter={() => setOpen(true)}
+      onMouseLeave={() => setOpen(false)}
+      onFocus={() => setOpen(true)}
+      onBlur={(e) => {
+        if (!e.currentTarget.contains(e.relatedTarget as Node | null)) setOpen(false);
+      }}
+      onKeyDown={(e) => {
+        if (e.key === "Escape") setOpen(false);
+      }}
+    >
       <button
         type="button"
-        className="flex items-center gap-1 capitalize leading-4 hover:text-green-700"
-        aria-haspopup="menu"
+        className="flex items-center gap-1 capitalize leading-4 transition-colors hover:text-accent"
+        aria-expanded={open}
+        aria-controls={menuId}
+        onClick={() => setOpen(true)}
       >
         {text}
         <ChevronDown
           size={16}
-          className="transition-transform group-hover:rotate-180 group-focus-within:rotate-180"
+          className={`transition-transform ${open ? "rotate-180" : ""}`}
         />
       </button>
-      <div className="invisible absolute left-1/2 top-full z-50 -translate-x-1/2 pt-4 opacity-0 transition group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+      <div
+        id={menuId}
+        className={`absolute left-1/2 top-full z-50 -translate-x-1/2 pt-4 transition-all duration-200 ${
+          open ? "visible opacity-100" : "invisible opacity-0"
+        }`}
+      >
         <ul className="min-w-48 list-none rounded-2xl border border-accent bg-green-950 p-2 shadow-lg">
           {items.map((c) => (
             <li key={c.text} className="list-none">
               <Link
                 href={c.link}
-                className="block rounded-xl px-4 py-2 whitespace-nowrap hover:bg-green-900 hover:text-green-400"
+                onClick={() => setOpen(false)}
+                className="block whitespace-nowrap rounded-xl px-4 py-2 hover:bg-green-900 hover:text-green-400"
               >
                 {c.text}
               </Link>

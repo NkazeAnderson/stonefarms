@@ -29,7 +29,7 @@ export default function GalleryPage() {
   }
 
   return (
-    <main className="pt-32 pb-20 px-4 md:px-10 bg-green-50/30 min-h-screen">
+    <main className="pt-36 lg:pt-40 pb-20 px-4 md:px-10 bg-green-50/30 min-h-screen">
       <div className="max-w-7xl mx-auto">
         <header className="mb-16 text-center">
           <p className="text-sm font-semibold uppercase tracking-[0.35em] text-primary/80 mb-3">

@@ -23,7 +23,7 @@ export default async function BlogsPage({
   }
 
   return (
-    <main className={`${styles.blogPage} bg-slate-50 pb-10 pt-28! sm:py-14`}>
+    <main className={`${styles.blogPage} bg-slate-50 pb-10 pt-32 md:pt-36 lg:pt-40 sm:pb-14`}>
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {isProjects ? (
           <div className="mb-12 text-center">
@@ -65,7 +65,11 @@ export default async function BlogsPage({
               const imageUrl = getFeaturedImage(post);
 
               return (
-                <Link href={`/blog/${post.slug}`}>
+                <Link
+                  key={post.id}
+                  href={`/blog/${post.slug}`}
+                  className="block"
+                >
                   <article
                     key={post.id}
                     className="group overflow-hidden rounded-[1.5rem] border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg dark:border-slate-700 dark:bg-slate-900"
@@ -92,12 +96,11 @@ export default async function BlogsPage({
                       <p className="mt-4 text-sm leading-7 text-slate-600 dark:text-slate-300">
                         {stripHtml(post.excerpt.rendered).slice(0, 160)}…
                       </p>
-                      <Link
-                        href={`/blog/${post.slug}`}
+                      <span
                         className={`${styles.blogLink} mt-6 inline-flex text-sm font-semibold`}
                       >
                         Read full story →
-                      </Link>
+                      </span>
                     </div>
                   </article>
                 </Link>

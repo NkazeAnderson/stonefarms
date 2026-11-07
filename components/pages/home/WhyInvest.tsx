@@ -8,7 +8,7 @@ import Link from "next/link";
 function WhyInvest() {
   return (
     <section className="z-10 px-4 md:px-20 py-10">
-      <h2 className="text-primary pt-6 lg:pt-10 pb-4 sticky top-[40px] lg:top-[80px]">
+      <h2 className="text-primary pt-6 lg:pt-10 pb-4">
         Why Partner with Us?
       </h2>
       <div className="relative flex flex-col gap-6 min-h-[80vh]">
@@ -41,15 +41,16 @@ function WhyInvest() {
         ))}
 
         <div className="flex py-3 h-56 flex-col justify-end sticky top-[230px] ">
-          <Link href={"/contact"}>
-            <Button
-              size={"lg"}
-              className=" self-center bg-accent text-primary-800 font-semibold"
-            >
+          <Button
+            asChild
+            size="lg"
+            className="self-center bg-accent text-primary-800 font-semibold"
+          >
+            <Link href="/contact-us">
               Partner with Us
               <Tractor />
-            </Button>
-          </Link>
+            </Link>
+          </Button>
         </div>
       </div>
     </section>

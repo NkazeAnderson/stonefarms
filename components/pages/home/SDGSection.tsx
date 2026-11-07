@@ -39,12 +39,12 @@ function SDGSection() {
                 <div className="h-37 aspect-video relative">
                   <Image src={item.image} alt="SDG Goal" fill />
                 </div>
-                <h6 className="font-medium text-sm! text-primary-50 bg-primary-500 rounded-md  px-1 self-start inline">
+                <h6 className="font-medium text-sm text-primary-50 bg-primary-500 rounded-md  px-1 self-start inline">
                   Our Actions
                 </h6>
                 <ul className=" list-disc list-inside text-sm">
                   {item.actions.map((action) => (
-                    <li>{action}</li>
+                    <li key={action}>{action}</li>
                   ))}
                 </ul>
               </div>

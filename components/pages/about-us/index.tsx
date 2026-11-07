@@ -21,7 +21,7 @@ function AboutUsPage() {
       <div className=" w-full h-[50vh] pt-20">
         <div className="bg-[url(/IMG-20240810-WA0112.jpg)] bg-cover bg-no-repeat bg-center relative flex justify-center items-center h-full bg-fixed">
           <div className="absolute inset-0 bg-primary-500/50 border"></div>
-          <h1 className=" text-white text [-webkit-text-stroke:2px_green] z-10">
+          <h1 className="z-10 text-5xl font-bold text-white drop-shadow-lg md:text-6xl">
             About us
           </h1>
         </div>

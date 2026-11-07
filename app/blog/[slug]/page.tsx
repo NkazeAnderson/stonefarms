@@ -92,7 +92,7 @@ export default async function BlogPostPage({
   }
 
   return (
-    <main className={`${styles.blogPage} bg-slate-50 pb-10 pt-28! sm:py-14`}>
+    <main className={`${styles.blogPage} bg-slate-50 pb-10 pt-32 md:pt-36 lg:pt-40 sm:pb-14`}>
       {post.yoast_head_json?.schema && (
         <script
           type="application/ld+json"

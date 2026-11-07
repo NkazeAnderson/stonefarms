@@ -40,8 +40,12 @@ export default async function BlogSection() {
             const imageUrl = getFeaturedImage(post);
 
             return (
-              <Link href={`/blog/${post.slug}`} className=" h-full">
-                <Card key={post.id} className="group">
+              <Link
+                key={post.id}
+                href={`/blog/${post.slug}`}
+                className="h-full"
+              >
+                <Card className="group h-full overflow-hidden transition duration-300 hover:-translate-y-1 hover:shadow-lg">
                   {imageUrl ? (
                     <img
                       src={imageUrl}
@@ -76,9 +80,9 @@ export default async function BlogSection() {
         )}
       </div>
       <div className="pt-10 flex items-center justify-center">
-        <Link href="/blog">
-          <Button variant={"outline"}>View All Blogs</Button>
-        </Link>
+        <Button asChild variant="outline">
+          <Link href="/blog">View All Blogs</Link>
+        </Button>
       </div>
     </section>
   );

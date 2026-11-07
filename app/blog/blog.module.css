@@ -40,6 +40,14 @@
   padding-left: 1rem;
 }
 
+.blogPostBody ul {
+  list-style: disc;
+}
+
+.blogPostBody ol {
+  list-style: decimal;
+}
+
 .blogPostBody li {
   margin-bottom: 0.75rem;
 }

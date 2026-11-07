@@ -15,7 +15,7 @@ export default async function StoryPage({
   if (!story) notFound();
 
   return (
-    <main className="bg-slate-50 pb-10 pt-28 sm:py-14">
+    <main className="bg-slate-50 pb-10 pt-32 md:pt-36 lg:pt-40 sm:pb-14">
       <article className="mx-auto max-w-3xl px-4 sm:px-6">
         <Link
           href="/stories"

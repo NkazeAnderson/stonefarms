@@ -5,7 +5,7 @@ export const metadata = { title: "Stories & Impact | STONEFARMS" };
 
 export default function StoriesPage() {
   return (
-    <main className="bg-slate-50 pb-10 pt-28 sm:py-14">
+    <main className="bg-slate-50 pb-10 pt-32 md:pt-36 lg:pt-40 sm:pb-14">
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-12 text-center">
           <p className="text-sm font-semibold uppercase tracking-[0.35em] text-primary/80">

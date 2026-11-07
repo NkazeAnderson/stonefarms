@@ -1,10 +1,11 @@
 "use client"
 
-import { createContext, PropsWithChildren, useContext, useState } from "react"
+import { createContext, PropsWithChildren, useCallback, useContext, useState } from "react"
 
 const AppContext = createContext({
     isMobileNavOpen:false,
-    toggleMobileNav:()=>{}
+    toggleMobileNav:()=>{},
+    closeMobileNav:()=>{}
 })
 
 export function useAppContext () {
@@ -17,10 +18,9 @@ export function useAppContext () {
 
 function AppContextProvider(props:PropsWithChildren) {
     const [ isMobileNavOpen, setIsMobileNavOpen] = useState(false)
-    function toggleMobileNav() {
-        setIsMobileNavOpen(prev=>!prev)
-    }
-    return <AppContext.Provider value={{isMobileNavOpen, toggleMobileNav}}>
+    const toggleMobileNav = useCallback(() => setIsMobileNavOpen(prev => !prev), [])
+    const closeMobileNav = useCallback(() => setIsMobileNavOpen(false), [])
+    return <AppContext.Provider value={{isMobileNavOpen, toggleMobileNav, closeMobileNav}}>
         {props.children}
     </AppContext.Provider>
 }
